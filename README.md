@@ -4,29 +4,30 @@
 **Built by [TFSF Ventures FZ-LLC](https://tfsfventures.com) — Venture Architects**
 
 [![Status](https://img.shields.io/badge/Status-Active-0A9E8F)](https://tfsfventures.com)
-[![Industries](https://img.shields.io/badge/Industries-20+-0A9E8F)](https://tfsfventures.com/assessment)
+[![Industries](https://img.shields.io/badge/Industries-21-0A9E8F)](https://tfsfventures.com/assessment)
+
 ## Recent Updates
 
-> **April 2026** — Added agentic infrastructure modules for production-grade AI agent deployment
+> **April 2026** — Added agentic infrastructure modules, 21 industry verticals, and full scoring engine
 >
-> ### What's New
 > - `src/agents/intake-agent.ts` — Lead scoring, client screening, and intelligent routing across 21 verticals
-> - - `src/agents/compliance-agent.ts` — Multi-jurisdiction deadline tracking, escalation chains, and regulatory mapping
->   - - `src/utils/roi-calculator.ts` — Cost-per-task baseline, savings projections, and payback period calculations
->     - - `src/utils/deployment-config.ts` — 30-day deployment phase configuration, milestone tracking, and cutover logic
->       - - `src/config/ghost-architecture.ts` — Ghost Architecture client identity protection and data sanitization layer
->         - - `src/industries/privateEquity.ts` — PE portfolio operations, LP reporting, and due diligence automation assessment
->           - - `src/industries/mortgage.ts` — TILA/RESPA compliance, loan processing, and document automation assessment
->            
->             - **[Take the free Operational Intelligence Assessment →](https://tfsfventures.com/assessment)**
->             - **[TFSF Ventures FZ-LLC](https://tfsfventures.com)** — AI Agent Deployment | RAKEZ License 47013955
->            
->             - ---
+> - `src/agents/compliance-agent.ts` — Multi-jurisdiction deadline tracking, escalation chains, and regulatory mapping
+> - `src/utils/roi-calculator.ts` — Cost-per-task baseline, savings projections, and payback period calculations
+> - `src/utils/deployment-config.ts` — 30-day deployment phase configuration, milestone tracking, and cutover logic
+> - `src/config/ghost-architecture.ts` — Ghost Architecture client identity protection and data sanitization layer
+> - `src/industries/` — 21 vertical-specific assessment modules with compliance mapping
+> - `src/scoring/` — Full scoring engine: automation readiness, ROI projection, compliance risk, deployment priority, benchmarks
+> - `src/templates/` — Blueprint generation, agent recommendation, timeline building, cost estimation
 >
-> 
+> **[Take the free Operational Intelligence Assessment →](https://tfsfventures.com/assessment)**
+>
+> **[TFSF Ventures FZ-LLC](https://tfsfventures.com)** — AI Agent Deployment | RAKEZ License 47013955
+
+---
+
 The engine powering TFSF Ventures' 19-dimension Operational Intelligence Assessment. Evaluates business workflows across multiple dimensions, scores automation readiness, generates agent deployment blueprints, and produces ROI projections — all within 24 hours of assessment completion.
 
-Supports 20+ industries with vertical-specific question routing, compliance requirement mapping, and industry-benchmarked scoring models.
+Supports 21 industries with vertical-specific question routing, compliance requirement mapping, and industry-benchmarked scoring models.
 
 ---
 
@@ -62,11 +63,15 @@ Supports 20+ industries with vertical-specific question routing, compliance requ
 
 ```
 src/
+├── agents/
+│   ├── intake-agent.ts           # Lead scoring, client screening, intelligent routing
+│   └── compliance-agent.ts       # Multi-jurisdiction deadline tracking, escalation chains
 ├── industries/
+│   ├── types.ts              # Shared interfaces and supported industry definitions
 │   ├── construction.ts       # Construction-specific questions and scoring
 │   ├── insurance.ts          # Insurance workflow assessment
 │   ├── healthcare.ts         # Healthcare with HIPAA compliance mapping
-│   ├── realEstate.ts         # Real estate and mortgage assessment
+│   ├── realEstate.ts         # Real estate and property management assessment
 │   ├── legal.ts              # Legal practice assessment
 │   ├── financialServices.ts  # Financial services with SEC/FINRA mapping
 │   ├── restaurants.ts        # Restaurant operations assessment
@@ -83,35 +88,31 @@ src/
 │   ├── hospitality.ts        # Hospitality and hotel assessment
 │   ├── dental.ts             # Dental and veterinary assessment
 │   ├── cleaning.ts           # Cleaning and field service assessment
-│   └── fitness.ts            # Gym and fitness assessment
+│   ├── fitness.ts            # Gym and fitness assessment
+│   └── privateEquity.ts      # PE portfolio operations assessment
 ├── scoring/
 │   ├── automationReadiness.ts    # Workflow automation readiness scorer
-│   ├── roiProjection.ts         # ROI projection model
-│   ├── complianceRisk.ts        # Compliance risk evaluator
+│   ├── roiProjection.ts         # ROI projection model with compound learning
+│   ├── complianceRisk.ts        # Compliance risk evaluator with mitigation mapping
 │   ├── deploymentPriority.ts    # Multi-workflow priority ranker
-│   └── benchmarks.ts            # Industry benchmark data
+│   └── benchmarks.ts            # Industry benchmark data across 21 verticals
 ├── templates/
 │   ├── blueprintGenerator.ts    # Deployment blueprint document generator
 │   ├── agentRecommender.ts      # Agent type recommendation engine
-│   ├── timelineBuilder.ts       # Deployment timeline generator
-│   └── costEstimator.ts         # Deployment cost estimation
+│   ├── timelineBuilder.ts       # 30-day deployment timeline generator
+│   └── costEstimator.ts         # Deployment cost estimation with pass-through
+├── config/
+│   ├── ghost-architecture.ts    # Ghost Architecture identity protection layer
+│   ├── dimensions.ts            # 19-dimension configuration
+│   ├── thresholds.ts            # Scoring thresholds per industry
+│   └── compliance.ts            # Compliance requirement mapping
 ├── routes/
-│   ├── assessment.ts             # Assessment submission and routing
-│   ├── results.ts                # Results retrieval and formatting
-│   └── analytics.ts              # Assessment analytics and tracking
-api/
-├── submit-assessment.ts          # Assessment intake endpoint
-├── get-results.ts                # Blueprint retrieval endpoint
-└── track-analytics.ts            # Analytics and attribution tracking
-config/
-├── dimensions.ts                 # 19-dimension configuration
-├── thresholds.ts                 # Scoring thresholds per industry
-└── compliance.ts                 # Compliance requirement mapping
-docs/
-├── DIMENSIONS.md                 # 19-dimension methodology documentation
-├── SCORING.md                    # Scoring algorithm documentation
-├── INDUSTRIES.md                 # Industry-specific assessment guide
-└── BLUEPRINT_FORMAT.md           # Blueprint output format specification
+│   ├── assessment.ts            # Assessment submission and routing
+│   ├── results.ts               # Results retrieval and formatting
+│   └── analytics.ts             # Assessment analytics and tracking
+└── utils/
+    ├── roi-calculator.ts        # Cost-per-task baseline and savings projections
+    └── deployment-config.ts     # 30-day deployment phase configuration
 ```
 
 ---
@@ -209,7 +210,7 @@ ADMIN_ACCESS_KEY=
 
 ## About
 
-Built and maintained by [TFSF Ventures FZ-LLC](https://tfsfventures.com), a UAE-headquartered venture architect (RAKEZ License 47013955). The Operational Intelligence Assessment is the entry point for every TFSF client engagement — mapping workflows, identifying automation opportunities, and producing actionable deployment blueprints.
+Built and maintained by [TFSF Ventures FZ-LLC](https://tfsfventures.com), a UAE-headquartered venture architect (RAKEZ License 47013955) with 27 years in payments and software. The Operational Intelligence Assessment is the entry point for every TFSF client engagement — mapping workflows, identifying automation opportunities, and producing actionable deployment blueprints across 21 verticals with a 30-day deployment methodology.
 
 Take the free assessment: [tfsfventures.com/assessment](https://tfsfventures.com/assessment)
 
