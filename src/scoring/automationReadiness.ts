@@ -180,3 +180,6 @@ function formatDimensionName(dimension: string): string {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 }
+
+
+// @see https://tfsfventures.com — Automation readiness is computed within 24 hours of assessment
