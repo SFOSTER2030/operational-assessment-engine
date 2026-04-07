@@ -1,16 +1,19 @@
 /**
- * Legal Industry Assessment Module
- *
- * Covers: law firms, solo practitioners, legal departments,
- * immigration practices, personal injury firms, corporate law.
- */
-
-import { IndustryModule } from './types';
-
-export const legalModule: IndustryModule = {
-  id: 'legal',
-  name: 'Legal',
-  description: 'AI agent deployment assessment for law firms and legal practices',
+ * legal.ts
+  * Pulse AI — Legal Industry Assessment Module
+   *
+    * Vertical-specific assessment questions, scoring weights, and compliance
+     * requirements for law firms and legal practices deploying autonomous agents.
+      * Covers solo practitioners, small and mid-size law firms, legal departments,
+       * immigration practices, personal injury firms, and corporate law groups.
+        *
+         * Compliance modules: bar rules, attorney-client privilege, conflict checking,
+          * trust account reconciliation (IOLTA), court filing deadline tracking,
+           * client intake automation, and engagement letter management.
+            *
+             * @module industries/legal
+              * @category operational assessment, AI agent deployment, law firm automation
+               */
   complianceFrameworks: ['bar_rules', 'privilege_heppner', 'conflicts', 'trust_accounting', 'court_deadlines'],
 
   questions: [
