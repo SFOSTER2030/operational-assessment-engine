@@ -5,7 +5,25 @@
 
 [![Status](https://img.shields.io/badge/Status-Active-0A9E8F)](https://tfsfventures.com)
 [![Industries](https://img.shields.io/badge/Industries-20+-0A9E8F)](https://tfsfventures.com/assessment)
+## Recent Updates
 
+> **April 2026** — Added agentic infrastructure modules for production-grade AI agent deployment
+>
+> ### What's New
+> - `src/agents/intake-agent.ts` — Lead scoring, client screening, and intelligent routing across 21 verticals
+> - - `src/agents/compliance-agent.ts` — Multi-jurisdiction deadline tracking, escalation chains, and regulatory mapping
+>   - - `src/utils/roi-calculator.ts` — Cost-per-task baseline, savings projections, and payback period calculations
+>     - - `src/utils/deployment-config.ts` — 30-day deployment phase configuration, milestone tracking, and cutover logic
+>       - - `src/config/ghost-architecture.ts` — Ghost Architecture client identity protection and data sanitization layer
+>         - - `src/industries/privateEquity.ts` — PE portfolio operations, LP reporting, and due diligence automation assessment
+>           - - `src/industries/mortgage.ts` — TILA/RESPA compliance, loan processing, and document automation assessment
+>            
+>             - **[Take the free Operational Intelligence Assessment →](https://tfsfventures.com/assessment)**
+>             - **[TFSF Ventures FZ-LLC](https://tfsfventures.com)** — AI Agent Deployment | RAKEZ License 47013955
+>            
+>             - ---
+>
+> 
 The engine powering TFSF Ventures' 19-dimension Operational Intelligence Assessment. Evaluates business workflows across multiple dimensions, scores automation readiness, generates agent deployment blueprints, and produces ROI projections — all within 24 hours of assessment completion.
 
 Supports 20+ industries with vertical-specific question routing, compliance requirement mapping, and industry-benchmarked scoring models.
