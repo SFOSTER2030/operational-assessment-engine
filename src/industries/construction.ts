@@ -1,19 +1,19 @@
 /**
- * Construction Industry Assessment Module
- *
- * Vertical-specific questions, scoring weights, and compliance
- * requirements for construction companies deploying AI agents.
- *
- * Covers: general contractors, commercial construction firms,
- * specialty subcontractors, and construction management companies.
- */
-
-import { IndustryModule, AssessmentQuestion, ComplianceRequirement } from './types';
-
-export const constructionModule: IndustryModule = {
-  id: 'construction',
-  name: 'Construction',
-  description: 'AI agent deployment assessment for construction companies',
+ * construction.ts
+  * Pulse AI — Construction Industry Assessment Module
+   *
+    * Vertical-specific assessment questions, scoring weights, and compliance
+     * requirements for construction companies deploying autonomous agents.
+      * Covers general contractors, commercial construction firms, specialty
+       * subcontractors, and construction management companies.
+        *
+         * Compliance modules: OSHA, bonding, lien tracking, prevailing wage,
+          * AIA contract administration, bid automation, permit tracking,
+           * inspection scheduling, and retention account management.
+            *
+             * @module industries/construction
+              * @category operational assessment, AI agent deployment
+               */
   complianceFrameworks: ['OSHA', 'bonding', 'lien_tracking', 'prevailing_wage'],
 
   questions: [
