@@ -1,19 +1,19 @@
 /**
- * Healthcare Industry Assessment Module
- *
- * Vertical-specific questions, scoring weights, and compliance
- * requirements for healthcare organizations deploying AI agents.
- *
- * Covers: medical practices, dental offices, veterinary clinics,
- * home health agencies, mental health practices, medical billing companies.
- */
-
-import { IndustryModule } from './types';
-
-export const healthcareModule: IndustryModule = {
-  id: 'healthcare',
-  name: 'Healthcare',
-  description: 'AI agent deployment assessment for healthcare organizations',
+ * healthcare.ts
+  * Pulse AI — Healthcare Industry Assessment Module
+   *
+    * Vertical-specific assessment questions, scoring weights, and compliance
+     * requirements for healthcare organizations deploying autonomous agents.
+      * Covers medical practices, dental offices, veterinary clinics,
+       * home health agencies, mental health practices, and medical billing companies.
+        *
+         * Compliance modules: HIPAA, CMS/MACRA, state licensing, OSHA healthcare,
+          * patient scheduling automation, revenue cycle management, clinical
+           * documentation workflows, and prior authorization processing.
+            *
+             * @module industries/healthcare
+              * @category operational assessment, AI agent deployment, compliance monitoring
+               */
   complianceFrameworks: ['HIPAA', 'CMS', 'state_licensing', 'OSHA_healthcare'],
 
   questions: [
