@@ -1,0 +1,128 @@
+/**
+ * insurance.ts
+ * Pulse AI — Insurance Industry Assessment Module
+ *
+ * Vertical-specific assessment questions, scoring weights, and compliance
+ * requirements for insurance agencies and carriers deploying autonomous agents.
+ * Covers property & casualty, life insurance, health insurance brokerages,
+ * managing general agents (MGAs), and claims processing operations.
+ *
+ * @module industries/insurance
+ * @category operational assessment, AI agent deployment
+ */
+
+import { IndustryModule } from './types';
+
+/** Insurance industry assessment configuration for the Pulse AI operational assessment engine */
+export const insuranceModule: IndustryModule = {
+    complianceFrameworks: ['state_DOI', 'NAIC', 'surplus_lines', 'claims_standards'],
+
+    questions: [
+      {
+              id: 'ins_01',
+              dimension: 'workflow_volume',
+              text: 'How many policies does your agency process per month across all lines?',
+              type: 'range',
+              options: ['Under 100', '100-500', '500-2,000', '2,000+'],
+              weight: 1.2,
+      },
+      {
+              id: 'ins_02',
+              dimension: 'process_complexity',
+              text: 'How many carrier systems does your team access for quoting and binding?',
+              type: 'range',
+              options: ['1-3', '4-8', '9-15', '15+'],
+              weight: 1.1,
+      },
+      {
+              id: 'ins_03',
+              dimension: 'exception_frequency',
+              text: 'What percentage of claims require manual review or special handling?',
+              type: 'range',
+              options: ['Under 10%', '10-25%', '25-40%', '40%+'],
+              weight: 1.4,
+      },
+      {
+              id: 'ins_04',
+              dimension: 'cycle_time',
+              text: 'What is your average time from application receipt to policy issuance?',
+              type: 'duration',
+              options: ['Same day', '1-3 days', '4-7 days', '7+ days'],
+              weight: 1.3,
+      },
+      {
+              id: 'ins_05',
+              dimension: 'error_rate',
+              text: 'How often do applications require rework due to data entry errors?',
+              type: 'frequency',
+              options: ['Rarely (<5%)', 'Sometimes (5-15%)', 'Often (15-25%)', 'Frequently (25%+)'],
+              weight: 1.5,
+      },
+      {
+              id: 'ins_06',
+              dimension: 'system_inventory',
+              text: 'Which agency management systems do you currently use?',
+              type: 'multi_select',
+              options: ['Applied Epic', 'Vertafore AMS360', 'HawkSoft', 'EZLynx', 'NowCerts', 'Other'],
+              weight: 1.0,
+      },
+      {
+              id: 'ins_07',
+              dimension: 'compliance_complexity',
+              text: 'In how many states does your agency hold active producer licenses?',
+              type: 'range',
+              options: ['1-5', '6-15', '16-30', '30+'],
+              weight: 1.2,
+      },
+      {
+              id: 'ins_08',
+              dimension: 'headcount_allocation',
+              text: 'How many FTEs handle policy processing, renewals, and endorsements?',
+              type: 'range',
+              options: ['1-3', '4-8', '9-15', '15+'],
+              weight: 1.3,
+      },
+        ],
+
+    complianceRequirements: [
+      {
+              framework: 'state_DOI',
+              description: 'State Department of Insurance regulatory compliance',
+              agentCapability: 'Compliance agent tracks filing requirements, rate approvals, and regulatory deadlines per state',
+              automationLevel: 'assisted',
+      },
+      {
+              framework: 'NAIC',
+              description: 'NAIC model law compliance for policy forms and rate filings',
+              agentCapability: 'Policy agents validate against NAIC model law requirements for each line of business',
+              automationLevel: 'auto_resolve',
+      },
+      {
+              framework: 'surplus_lines',
+              description: 'Surplus lines filing and tax compliance across jurisdictions',
+              agentCapability: 'Surplus lines agent calculates taxes, generates stamping office filings, and tracks eligibility',
+              automationLevel: 'auto_resolve',
+      },
+      {
+              framework: 'claims_standards',
+              description: 'Unfair claims settlement practices act compliance',
+              agentCapability: 'Claims agent tracks response deadlines, documentation requirements, and settlement benchmarks',
+              automationLevel: 'assisted',
+      },
+        ],
+
+    scoringOverrides: {
+          exception_frequency: 1.4,
+          error_rate: 1.5,
+          compliance_complexity: 1.2,
+    },
+
+    agentRecommendations: [
+          'Policy Processing Agent — Automates application intake, carrier submission, and policy issuance',
+          'Claims Intake Agent — Handles first notice of loss, documentation collection, and classification',
+          'Renewal Management Agent — Identifies upcoming renewals and manages carrier remarketing',
+          'Certificate Agent — Generates certificates of insurance and tracks holder requirements',
+          'Compliance Agent — Tracks producer licensing, CE requirements, and state regulatory filings',
+          'Surplus Lines Agent — Manages diligent search, tax calculations, and stamping office submissions',
+        ],
+};
